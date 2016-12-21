@@ -1,0 +1,12 @@
+#ifndef LITECADAPI_GLOBAL_H
+#define LITECADAPI_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(LITECADAPI_LIBRARY)
+#  define LITECADAPISHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define LITECADAPISHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // LITECADAPI_GLOBAL_H
