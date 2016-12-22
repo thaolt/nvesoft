@@ -85,6 +85,7 @@ void MainWindow::on_actionContext_help_triggered()
 
 void MainWindow::on_actionGrid_toggled(bool arg1)
 {
+    Q_UNUSED( arg1 );
     lcWndExeCommand(this->m_hLcWnd, LC_CMD_SW_GRID, 0);
 }
 
@@ -96,4 +97,9 @@ void MainWindow::on_actionCmdArc_triggered()
 void MainWindow::on_actionSave_triggered()
 {
     lcDrwSave(this->g_hLcDrw, L"D:\\test.lcd", false, this->m_hLcWnd);
+}
+
+void MainWindow::on_action_Configure_triggered()
+{
+
 }
