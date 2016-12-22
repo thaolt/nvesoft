@@ -26,14 +26,25 @@ private slots:
 
     void on_actionToolLine_triggered();
 
+    void on_actionCmdExplode_triggered();
+
+    void on_actionContext_help_triggered();
+
+    void on_actionGrid_toggled(bool arg1);
+
+    void on_actionCmdArc_triggered();
+
+    void on_actionSave_triggered();
+
 private:
     Ui::MainWindow *ui;
 
-    HANDLE lcHWND;
+    HANDLE m_hLcWnd;
     HANDLE g_hLcDrw;
 
     void closeEvent(QCloseEvent *event);
     void resizeEvent(QResizeEvent *event);
+    void showEvent(QShowEvent *event);
 };
 
 #endif // MAINWINDOW_H
