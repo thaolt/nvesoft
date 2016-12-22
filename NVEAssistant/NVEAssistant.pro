@@ -8,6 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+DESTDIR = $$OUT_PWD/../dist/
 TARGET = NVEAssistant
 TEMPLATE = app
 
@@ -25,11 +26,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 LIBS += -luser32 -lshell32 -lgdi32
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    configform.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    configform.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    configform.ui
 
 win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../3rdparty/litecadapi/release/ -llitecadapi
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../3rdparty/litecadapi/debug/ -llitecadapi

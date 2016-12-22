@@ -72,9 +72,16 @@
     <addaction name="actionGrid"/>
     <addaction name="actionRuler"/>
    </widget>
+   <widget class="QMenu" name="menu_Tools">
+    <property name="title">
+     <string>&amp;Tools</string>
+    </property>
+    <addaction name="action_Configure"/>
+   </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_View"/>
    <addaction name="menu_Help"/>
+   <addaction name="menu_Tools"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -162,6 +169,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_Configure">
+   <property name="text">
+    <string>&amp;Configure..</string>
    </property>
   </action>
  </widget>
